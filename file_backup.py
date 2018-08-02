@@ -1,3 +1,7 @@
+#This scripts helps you to backup the contents of a directory
+#files and directories fast . Simply write the source path and 
+#the path of the folder you wish to save your files to.
+
 import os, sys
 import shutil
 import errno
