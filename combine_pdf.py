@@ -1,3 +1,5 @@
+#script idea taken from AutomateTheBoringStuff.com
+
 import PyPDF2, os
 
 pdf_files = []
