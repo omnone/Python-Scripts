@@ -6,7 +6,7 @@ import os, sys
 import shutil
 import errno
 
-src = input("Give the path of  the folder to backup:")
+src = input("Give the path of  the folder you wish to backup:")
 dest = input("Give the path of the destination folder:")
 
 print("==========================================")
