@@ -1,17 +1,12 @@
-#script idea taken from AutomateTheBoringStuff.com
-
 import PyPDF2, os
 
 pdf_files = []
 
 #get all pdf files from directory
-for filename in os.listdir('.'):
-	if filename.endswith('.pdf'):
-		pdf_files.append(filename)
+pdf_files=[filename for filename in os.listdir('.') if filename.endswith('.pdf')]
 
 #sort filenames 
 pdf_files.sort()
-
 
 pdfWriter = PyPDF2.PdfFileWriter()
 
