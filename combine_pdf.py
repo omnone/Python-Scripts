@@ -17,7 +17,7 @@ pdfWriter = PyPDF2.PdfFileWriter()
 
 #copy each pdf file to the final output file
 for filename in pdf_files:
-	print("Merging "+filename+" to main pdf file")
+	print(f'Merging {filename} to main pdf file')
 	pdfFileObj = open(filename,'rb')
 	pdfReader = PyPDF2.PdfFileReader(pdfFileObj,strict=False)
 
