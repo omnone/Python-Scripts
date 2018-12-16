@@ -32,7 +32,7 @@ with open('metadata_check.csv', mode='w', newline='') as check_file:
                 results.append([filename,'False','-'])
 
                 
-     csv_writer.writerows(sorted(results, key=lambda x: x[1]))                
+     csv_writer.writerows(sorted(results, key=lambda x: x[1],reverse=True))                
              
                 
                      
