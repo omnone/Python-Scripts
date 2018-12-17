@@ -4,7 +4,6 @@ import PyPDF2, os
 #get all pdf files from directory
 pdf_files=[filename for filename in os.listdir('.') if filename.endswith('.pdf')]
 
-
 for filename in pdf_files:
         pdfWriter = PyPDF2.PdfFileWriter()
         print(f'Removing metadata from {filename}')
