@@ -20,7 +20,7 @@ def copy(src, dest):
     global dir_n,file_n,errors_n
     try:
         shutil.copytree(src, dest)
-        print("[*]Copying Directory: "+dest)
+        print(f'[*]Copying Directory: {dest}')
         dir_n+=1
     except OSError as e:
         #source is a file
@@ -41,7 +41,7 @@ for file_name in src_files:
     if (os.path.isfile(full_file_name) == 0):
         temp = dest + '/'+ file_name
     else:
-        print("[*]Copying File: " + file_name)
+        print(f'[*]Copying File: {file_name}')
         temp = dest
     #print(temp)
     copy(full_file_name , temp)
