@@ -18,6 +18,6 @@ for filename in pdf_files:
                 pdfWriter.addPage(pageObj)
 
         #save output file
-        pdfOutput = open(f'sanitized_{filename}.pdf','wb')
+        pdfOutput = open(f'sanitized_{filename}','wb')
         pdfWriter.write(pdfOutput)
         pdfOutput.close()
