@@ -9,15 +9,16 @@ with open('metadata_check.csv', mode='w', newline='') as check_file:
         
      csv_writer = csv.writer(check_file, delimiter=',', quotechar='"', quoting=csv.QUOTE_MINIMAL)
      csv_writer.writerow(['File:','Has_Meta:','Metadata:'])
+        
      results = []
+
      for filename in pdf_files:
              pdfWriter = PyPDF2.PdfFileWriter()
-
              pdfFileObj = open(filename,'rb')
              pdfReader = PyPDF2.PdfFileReader(pdfFileObj,strict=False)
+        
              metadata = pdfReader.getDocumentInfo()
              #print(metadata)
-
              meta_found= [key.strip('/').lower()+': '+value for key,value in metadata.items()
                           if value and key!='/Producer' and key!='/CreationDate'
                           and key!='/ModDate']
